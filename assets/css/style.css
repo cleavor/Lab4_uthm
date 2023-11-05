@@ -1,0 +1,328 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root{
+  --p-color: #192023;
+  --s-color: #303439;
+  --bradius: .5rem;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Quicksand', sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-sidebar{
+  position: fixed;
+  width: 5rem;
+  height: 100vh;
+  transition: width .5s;
+  background: var(--p-color);
+}
+
+.nav-sidebar.active{
+  width: 15rem;
+}
+
+.nav-sidebar .text{
+  opacity: 0;
+  transition: opacity .5s;
+  pointer-events: none;
+}
+
+.nav-sidebar .standalone-image{
+  display: none;
+  transition: opacity .5s;
+  pointer-events: none;
+}
+
+.nav-sidebar.active .text{
+  opacity: 1;
+}
+
+.nav-sidebar.active .standalone-image{
+  display: block;
+  padding-bottom: 1rem;
+}
+
+.nav-sidebar.active .standalone-image img{
+  padding-left:2rem;
+  height: 9rem;
+  width: 10.5rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.nav-sidebar.active .standalone-image .text{
+  font-weight: 600;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.nav-sidebar .wrapper{
+  position: relative;
+  height: 100%;
+  padding: 1rem 1.25rem;
+}
+
+.nav-sidebar .wrapper .sidebar-inner{
+  height: 100%;
+}
+
+.nav-sidebar .logo-container{
+  position: relative;
+}
+
+.nav-sidebar .logo-container .text{
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.nav-sidebar .logo-container .logo-wrapper{
+  display: flex;
+  align-items: center;
+}
+
+.nav-sidebar .logo-container .logo{
+  padding: 0.75rem 0.75rem 0.75rem 0.5rem;
+}
+
+
+.nav-sidebar .logo-container .logo img{
+  display: block;
+  width: 1.375rem;
+  height: 1.375rem;
+  transition: width .25s, height .25s;
+}
+
+.nav-sidebar .nav-toggle{
+  position: absolute;
+  top: 1.25rem;
+  right: -1.125rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 3;
+  background: #654321;
+  color: #FFFFFF;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.nav-sidebar .nav-toggle.rotate{
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.nav-sidebar .menu-container{
+  height: 100%;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-sidebar .menu-container .menu-wrapper{
+  display: flex;
+  align-items: center;
+}
+
+.nav-sidebar .menu-container .menu{
+  display: block;
+  margin: .5rem 0;
+  padding: .75rem;
+  border-radius: var(--bradius);
+  transition: background .25s;
+}
+
+.nav-sidebar .menu-container .menu:hover,
+.nav-sidebar .menu-container .menu.active{
+  background: var(--s-color);
+}
+
+.nav-sidebar .menu-container .menu .icon{
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: .875rem;
+}
+
+.nav-sidebar .menu-container .menu .icon i{
+  font-size: 1.125rem;
+  color: #6F7074;
+  transition: color .25s;
+}
+
+.nav-sidebar .menu-container .menu:hover .icon i,
+.nav-sidebar .menu-container .menu.active .icon i{
+  color: #FFFFFF;
+}
+
+.nav-sidebar .menu-container .menu .text{
+  font-weight: 600;
+  color: #6F7074;
+}
+
+.nav-sidebar .menu-container .menu:hover .text,
+.nav-sidebar .menu-container .menu.active .text{
+  color: #FFFFFF; transition: color .25s;
+}
+
+.nav-sidebar .menu-container .menu-footer{
+  padding-bottom: 5rem;
+}
+
+.nav-sidebar.active ~ .content-container{
+  width: calc(100% - 15rem);
+}
+
+.content-container{
+  width: calc(100% - 5rem);
+  margin: 0 0 0 auto;
+  padding: 2.5rem;
+  transition: width .5s;
+}
+
+.content-container .desc{
+  width: 100%;
+  max-width: 50rem;
+  line-height:  1.875;
+}
+ /* for the regis form */
+.button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+.select {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.select::after {
+  content: '\25BC'; /* Unicode character for a downward-pointing triangle */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #fff;
+}
+
+.title, form, #summarySection {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+legend {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+label {
+  color: #fff;
+  display: block;
+  margin-top: 10px;
+  padding-left: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  background-color: #444;
+  color: #fff;
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+input[type="submit"],
+input[type="button"] {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
+  background-color: #0056b3;
+}
+
+input[type="checkbox"]::before {
+  content: ''; /* Add empty content before the checkbox */
+  display: inline-block;
+  width: 20px; /* Set the width of the custom checkbox */
+  height: 20px; /* Set the height of the custom checkbox */
+  border: 2px solid #333; /* Set the border of the checkbox */
+  border-radius: 4px; /* Round the corners of the checkbox */
+  background-color: #fff; /* Set the background color of the checkbox */
+  margin-right: 5px; /* Add space between the custom checkbox and label */
+}
+
+input[type="checkbox"]:checked::before {
+  background-color: #007bff; /* Change the background color when checked */
+  border: 2px solid #007bff; /* Change the border color when checked */
+  color: #fff; /* Change the color of the checkmark */
+  content: '\2713'; /* Add a checkmark character when checked */
+  text-align: center; /* Center the checkmark character */
+  line-height: 20px; /* Center vertically */
+}
+
+#selectedProducts {
+  list-style-type: none; /* Remove the bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 10px 0; /* Add margin to separate from other elements */
+}
+
+#selectedProducts li {
+  margin: 5px 0; /* Add margin between list items */
+  font-size: 16px; /* Set the font size */
+  color: #333; /* Set the text color */
+  border: 1px solid #333; /* Add a border around each item */
+  padding: 5px; /* Add padding inside each item */
+  background-color: #f7f7f7; /* Set the background color */
+  border-radius: 4px; /* Round the corners of each item */
+}

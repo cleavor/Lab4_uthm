@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidebar Menu</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <!-- Box Icons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  
+  <nav class="nav-sidebar" id="sidebar">
+    <div class="wrapper">
+      <div class="nav-toggle" id="nav-toggle">
+        <i class='bx bx-chevron-right'></i>
+      </div>
+      <div class="sidebar-inner">
+        <div class="logo-container">
+          <div class="logo-wrapper">
+            <div class="logo">
+              <img src="./assets/img/logo.png" alt="Logo">
+            </div>
+            <span class="text">Railway HR</span>
+          </div>
+        </div>
+        <div class="menu-container">
+          <div class="menu-header">
+            <a href="#" class="menu">
+              <div class="menu-wrapper">
+                <div class="icon">
+                  <i class='bx bxs-id-card'></i>
+                </div>
+                <span class="text">
+                  Register
+                </span>
+              </div>
+            </a>
+            <a href="order.html" class="menu">
+              <div class="menu-wrapper">
+                <div class="icon">
+                  <i class='bx bx-bar-chart-alt'></i>
+                </div>
+                <span class="text">
+                  Order
+                </span>
+              </div>
+            </a>
+          </div>
+          <div class="menu-footer">
+            <a href="#" class="menu">
+              <div class="menu-wrapper">
+                <div class="icon">
+                  <i class='bx bx-power-off'></i>
+                </div>
+                <span class="text">
+                  Sign Out
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="content-container">
+    <h1 class="title">Register Account</h1><br>
+    <form action="#" method="post" id="registrationForm">
+      <fieldset>
+          <legend>Personal Information</legend>
+          <label for="firstname">First Name:</label> &emsp;
+          <input type="text" id="firstname" name="firstname" required><br><br>
+  
+          <label for="lastname">Last Name:</label> &emsp;
+          <input type="text" id="lastname" name="lastname" required><br><br>
+  
+          <label for="email">Email:</label> &emsp;
+          <input type="email" id="email" name="email" required><br><br>
+  
+          <label for="phone">Phone Number:</label> &emsp;
+          <input type="tel" id="phone" name="phone"><br><br>
+      </fieldset>
+  
+      <fieldset>
+          <legend>Address</legend>
+          <label for="street">Street Address:</label> &emsp;
+          <input type="text" id="street" name="street" required><br><br>
+  
+          <label for="city">City:</label> &emsp;
+          <input type="text" id="city" name="city" required><br><br>
+  
+          <label for="postcode">Postcode:</label> &emsp;
+          <input type="text" id="postcode" name="postcode" required><br><br>
+  
+          <label for="country">Country:</label> &emsp;
+          <select class="select" id="country" name="country" required>
+              <option value="" disabled selected>Select a Country</option>
+              <option value="Brunei">Brunei</option>
+              <option value="Cambodia">Cambodia</option>
+              <option value="Indonesia">Indonesia</option>
+              <option value="Laos">Laos</option>
+              <option value="Malaysia">Malaysia</option>
+              <option value="Myanmar">Myanmar</option>
+              <option value="Philippines">Philippines</option>
+              <option value="Singapore">Singapore</option>
+              <option value="Thailand">Thailand</option>
+              <option value="Vietnam">Vietnam</option>
+          </select><br><br>
+      </fieldset>
+      <br>
+      <input class="button" type="submit" value="Register">
+      <input class="button" type="button" value="Clear" onclick="clearForm()">
+  </form>
+  </div>
+  
+
+  <!-- Javascript -->
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>

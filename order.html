@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidebar Menu</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <!-- Box Icons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+  <nav class="nav-sidebar" id="sidebar">
+    <div class="wrapper">
+      <div class="nav-toggle" id="nav-toggle">
+        <i class='bx bx-chevron-right'></i>
+      </div>
+      <div class="sidebar-inner">
+        <div class="logo-container">
+          <div class="logo-wrapper">
+            <div class="logo">
+              <img src="./assets/img/logo.png" alt="Logo">
+            </div>
+            <span class="text">Railway HR</span>
+          </div>
+        </div>
+        <div class="menu-container">
+          <div class="menu-header">
+            <a href="register.html" class="menu">
+              <div class="menu-wrapper">
+                <div class="icon">
+                  <i class='bx bxs-id-card'></i>
+                </div>
+                <span class="text">
+                  Register
+                </span>
+              </div>
+            </a>
+            <a href="order.html" class="menu">
+              <div class="menu-wrapper">
+                <div class="icon">
+                  <i class='bx bx-bar-chart-alt'></i>
+                </div>
+                <span class="text">
+                  Order
+                </span>
+              </div>
+            </a>
+          </div>
+          <div class="menu-footer">
+            <a href="#" class="menu">
+              <div class="menu-wrapper">
+                <div class="icon">
+                  <i class='bx bx-power-off'></i>
+                </div>
+                <span class="text">
+                  Sign Out
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="content-container">
+    <h1 class="title">Product Order</h1><br>
+    <form id="productForm">
+      <h3>Categories</h3>
+      <select class="select" id="category" name="category">
+          <option value="books">Books</option>
+          <option value="electronics">Electronics</option>
+          <!-- Add more categories as needed -->
+      </select>
+  
+      <h3>Products</h3>
+      <div id="productList">
+          <!-- Product list will be populated using JavaScript -->
+      </div>
+  
+      <h3>Your Selection</h3>
+      <ul id="selectedProducts">
+          <!-- Selected products will be displayed here -->
+      </ul>
+  
+      <button type="button" id="submitButton" class="button">Submit Order/Rent</button>
+  </form>
+  </div>
+  <!-- Javascript -->
+<script src="./assets/js/script.js"></script>
+<script src="./assets/js/order.js"></script>
+</body>
+</html>
