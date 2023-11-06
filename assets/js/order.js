@@ -60,11 +60,16 @@ function updateSelectedProducts() {
     });
 
     const selectedProductNames = Object.keys(selectedProducts);
+    
     selectedProductNames.forEach(productName => {
         const listItem = document.createElement("li");
         listItem.textContent = productName;
         selectedProductsList.appendChild(listItem);
     });
+    const selectedProductsQueryParam = encodeURIComponent(selectedProductNames.join(','));
+
+    // Store the query parameter for later use, e.g., for the submit button
+    window.selectedProductsQueryParam = selectedProductsQueryParam;
 }
 
 // Event listener for category selection
@@ -75,17 +80,9 @@ categorySelect.addEventListener("change", () => {
 
 // Event listener for submit button
 submitButton.addEventListener("click", () => {
-    // Gather selected products from all checkboxes, regardless of category
-    const selectedCheckboxes = Array.from(productListDiv.querySelectorAll("input[type=checkbox]:checked"));
-    const selectedProducts = selectedCheckboxes.map(checkbox => checkbox.value);
-
-    // Send all selected products to page3
-    const selectedProductsQueryParam = encodeURIComponent(selectedProducts.join(','));
-
-    // Create a URL with the query parameter
     const page3URL = `osummary.html?selectedProducts=${selectedProductsQueryParam}`;
 
-    // Redirect to Page 3
+    // Redirect to Page 3 with the selected products in the query parameter
     window.location.href = page3URL;
 });
 
